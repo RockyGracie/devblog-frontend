@@ -42,27 +42,47 @@ body {
   padding: 0.3125rem 0.625rem;
 }
 
+.nav a:nth-of-type(1):hover { color: rgb(245, 0, 245) }
+.nav a:nth-of-type(2):hover { color: #fff; background-color: rgb(216, 0, 216) }
+
 .links {
   color: inherit;
   text-decoration: none;
 }
 
+.title {
+  color: #222;
+  margin-left: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
 .post-link { text-decoration: none }
 
-.post-link h3 {
+.post-link h3,
+.post-details--title {
   font-size: 1.4375rem;
   color: rgb(158, 1, 158);
 }
 
-.post-link p {
+.post-link p,
+.post-details--author {
   color: rgb(150, 150, 150);
   font-weight: 500;
 }
 
-.single-post {
+.post-details--body {
+  margin-top: 1.875rem;
+  color: #111;
+}
+
+.single-post,
+.post-details {
   padding: 0.625rem 2.5rem;
   margin-bottom: 1.25rem;
 }
 
 .single-post:hover { box-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, .3) }
 
+.form {
+
+}

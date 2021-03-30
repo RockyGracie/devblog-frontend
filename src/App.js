@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Posts from './components/Posts';
 import Header from './components/Header';
+import NewPost from './components/NewPost';
+import PostDetails from './components/PostDetails';
 
 function App() {
   const [posts, setPosts] = useState([]);
@@ -17,10 +19,22 @@ function App() {
   useEffect(() => fetchPosts(), []);
 
   return (
-    <div className="app">
-      <Header />
-      <Posts posts={posts} />
-    </div>
+    <Router>
+      <div className="app">
+        <Header />
+        <Switch>
+          <Route exact path="/">
+            <Posts posts={posts} />
+          </Route>
+          <Route exact path="/newpost">
+            <NewPost />
+          </Route>
+          <Route exact path="/post/:id">
+            <PostDetails />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
