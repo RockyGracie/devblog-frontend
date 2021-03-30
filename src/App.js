@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Posts from './components/Posts';
 import Header from './components/Header';
@@ -16,10 +17,10 @@ function App() {
   useEffect(() => fetchPosts(), []);
 
   return (
-    <>
+    <div className="app">
       <Header />
       <Posts posts={posts} />
-    </>
+    </div>
   );
 }
 

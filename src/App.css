@@ -8,6 +8,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: rgb(250, 250, 250);
   margin: 0 auto;
   width: 60vw;
 }
@@ -19,7 +20,8 @@ body {
 
   color:darkmagenta;
   padding: 1.875rem 3.75rem;
-  border-bottom: 1px solid darkmagenta;
+  margin-bottom: 4.375rem;
+  border-bottom: 0.0625rem solid rgb(220, 220, 220);
 }
 
 .header h2 { font-size: 1.875rem }
@@ -30,14 +32,14 @@ body {
   justify-content: space-between;
 
   font-size: 1.0625rem;
-  width: 175px;
+  width: 10.9375rem;
 }
 
 .nav a:nth-of-type(2) {
   color: rgb(250, 250, 250);
-  background-color: darkmagenta;
-  border-radius: 5px;
-  padding: 5px 10px;
+  background-color: rgb(158, 1, 158);
+  border-radius: 0.3125rem;
+  padding: 0.3125rem 0.625rem;
 }
 
 .links {
@@ -45,4 +47,22 @@ body {
   text-decoration: none;
 }
 
+.post-link { text-decoration: none }
+
+.post-link h3 {
+  font-size: 1.4375rem;
+  color: rgb(158, 1, 158);
+}
+
+.post-link p {
+  color: rgb(150, 150, 150);
+  font-weight: 500;
+}
+
+.single-post {
+  padding: 0.625rem 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.single-post:hover { box-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, .3) }
 

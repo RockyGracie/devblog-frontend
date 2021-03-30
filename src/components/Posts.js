@@ -1,10 +1,12 @@
+import SinglePost from './SinglePost';
+
 const Posts = ({ posts }) => {
 
-  console.log(posts)
-
   return (
-    <div>
-
+    <div className="posts">
+      {posts.map((post) => (
+        <SinglePost key={post.id} post={post} />
+      ))}
     </div>
   )
 };
