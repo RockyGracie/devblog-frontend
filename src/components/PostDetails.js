@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 
 import useFetch from './useFetch';
 
@@ -6,7 +6,14 @@ const PostDetails = () => {
 
   const { id } = useParams();
 
+  const history = useHistory();
+
   const { data: post, isLoading, error } = useFetch(`http://localhost:3000/posts/${id}`);
+
+  const deleteHandler = () => {
+    fetch(`http://localhost:3000/posts/${id}`, { method: 'DELETE' })
+      .then(() => history.push('/'));
+  };
 
   return (
     <div>
@@ -16,10 +23,11 @@ const PostDetails = () => {
         <p>Loading...</p>
       ) : (
         !error &&
-        <article className="post-details">
+        <article  rticle className="post-details">
           <h2 className="post-details--title">{post.title}</h2>
           <p className="post-details--author">Written by {post.author}</p>
           <p className="post-details--body">{post.body}</p>
+          <button className="delete-btn" onClick={deleteHandler}>Delete Post</button>
         </article>
       )}
     </div>

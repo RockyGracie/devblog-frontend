@@ -18,6 +18,7 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Posts posts={posts} />
+            {!isLoading && posts.length === 0 ? <p>No posts added.<br/> Create a new one to show.</p> : ''}
             {isLoading && <p>Loading...</p>}
             <p>{error}</p>
           </Route>
