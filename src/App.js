@@ -4,6 +4,7 @@ import Posts from './components/Posts';
 import Header from './components/Header';
 import NewPost from './components/NewPost';
 import PostDetails from './components/PostDetails';
+import NotFound from './components/NotFound';
 
 import useFetch from './components/useFetch';
 
@@ -27,6 +28,9 @@ function App() {
           </Route>
           <Route exact path="/post/:id">
             <PostDetails />
+          </Route>
+          <Route path="*">
+            <NotFound />
           </Route>
         </Switch>
       </div>

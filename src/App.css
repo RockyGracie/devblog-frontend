@@ -137,3 +137,13 @@ body {
   margin-top: 3.125rem;
   cursor: pointer;
 }
+
+.not-found h2 { margin-bottom: .5rem }
+.not-found p { margin-bottom: 2.5rem }
+
+.not-found a {
+  color: darkmagenta;
+  text-decoration: none;
+}
+
+.not-found a i { margin-right: 0.625rem }
