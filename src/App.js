@@ -12,16 +12,22 @@ function App() {
 
   const { data: posts, isLoading, error } = useFetch('http://localhost:3000/posts');
 
+  console.log(error);
+
   return (
     <Router>
       <div className="app">
         <Header />
         <Switch>
           <Route exact path="/">
-            <Posts posts={posts} />
-            {!isLoading && posts.length === 0 ? <p>No posts added.<br/> Create a new one to show.</p> : ''}
+            <h2 className="title">All Blogs</h2>
+            {posts.length > 0 && <Posts posts={posts} />}
             {isLoading && <p>Loading...</p>}
-            <p>{error}</p>
+            {error ? (
+              <p>{error}</p>
+            ) : (
+            !isLoading && posts.length === 0 && <p>No posts added.<br/> Create a new one to show.</p>
+            )}
           </Route>
           <Route exact path="/newpost">
             <NewPost />
