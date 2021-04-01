@@ -8,10 +8,10 @@ const PostDetails = () => {
 
   const history = useHistory();
 
-  const { data: post, isLoading, error } = useFetch(`http://localhost:3000/posts/${id}`);
+  const { data: post, isLoading, error } = useFetch(`http://localhost:5000/posts/${id}`);
 
   const deleteHandler = () => {
-    fetch(`http://localhost:3000/posts/${id}`, { method: 'DELETE' })
+    fetch(`http://localhost:5000/posts/${id}`, { method: 'DELETE' })
       .then(() => history.push('/'));
   };
 

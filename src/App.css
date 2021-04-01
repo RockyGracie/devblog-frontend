@@ -24,7 +24,10 @@ body {
   border-bottom: 0.0625rem solid rgb(220, 220, 220);
 }
 
-.header h2 { font-size: 1.875rem }
+.header h2 a {
+  text-decoration: none;
+  font-size: 1.875rem
+}
 
 .nav {
   display: flex;

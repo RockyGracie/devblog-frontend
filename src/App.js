@@ -10,9 +10,7 @@ import useFetch from './components/useFetch';
 
 function App() {
 
-  const { data: posts, isLoading, error } = useFetch('http://localhost:3000/posts');
-
-  console.log(error);
+  const { data: posts, isLoading, error } = useFetch('http://localhost:5000/posts');
 
   return (
     <Router>
